@@ -9,6 +9,7 @@ const config: Config = {
         accent: '#2F5BFF',
         'accent-dark': '#2449D6',
         mtn: '#FFCC00',
+        wave: '#7FE0FF',
         paper: '#F7F8FA',
       },
       fontFamily: {
