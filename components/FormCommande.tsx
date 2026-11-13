@@ -13,8 +13,8 @@ const CANAUX: { valeur: Canal; libelle: string }[] = [
   { valeur: 'email', libelle: 'E-mail' },
 ]
 
-const NUMERO_MOMO = process.env.NEXT_PUBLIC_MOMO_NUMERO
-const NOM_MOMO = process.env.NEXT_PUBLIC_MOMO_NOM
+const NUMERO_WAVE = process.env.NEXT_PUBLIC_WAVE_NUMERO || '0594568098'
+const NOM_WAVE = process.env.NEXT_PUBLIC_WAVE_NOM
 
 type Confirmation = { numero: number; zone: Zone; total: number | null; canal: Canal }
 
