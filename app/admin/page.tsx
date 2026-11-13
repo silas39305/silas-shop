@@ -2,10 +2,10 @@ import Link from 'next/link'
 import { supabaseAdmin } from '@/lib/supabase-admin'
 import { fcfa } from '@/lib/format'
 import { notification } from '@/lib/messages'
+import AdminNav from '@/components/AdminNav'
 import {
   annuler,
   confirmerLivraison,
-  deconnexion,
   envoyerDevis,
   validerPaiement,
 } from './actions'
@@ -97,12 +97,8 @@ export default async function Admin({
 
   return (
     <main>
-      <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold">Commandes</h1>
-        <form action={deconnexion}>
-          <button className="text-sm underline">Se déconnecter</button>
-        </form>
-      </div>
+      <AdminNav actif="commandes" />
+      <h1 className="text-2xl font-bold">Commandes</h1>
 
       <nav className="mt-5 flex flex-wrap gap-2" aria-label="Filtrer par statut">
         {ONGLETS.map((o) => (
