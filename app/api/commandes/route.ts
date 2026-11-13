@@ -41,7 +41,7 @@ export async function POST(req: Request) {
   }
   // Abidjan : le paiement se fait tout de suite, le numéro de transaction est obligatoire.
   if (zone === 'abidjan' && trx.length < 6) {
-    return erreur('Indique le numéro de transaction MTN Money reçu par SMS.')
+    return erreur('Indique le numéro de dépot wave.')
   }
 
   const db = supabaseAdmin()
