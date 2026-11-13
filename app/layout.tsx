@@ -20,7 +20,7 @@ const NOM = process.env.NEXT_PUBLIC_NOM_BOUTIQUE || 'Boutique Gadgets'
 export const metadata: Metadata = {
   title: { default: NOM, template: `%s | ${NOM}` },
   description:
-    'Des gadgets livrés gratuitement à Abidjan. Paiement MTN Money à l’avance, expédition dans toute la Côte d’Ivoire.',
+    'Des gadgets livrés gratuitement à Abidjan. Paiement wave à l’avance, expédition dans toute la Côte d’Ivoire.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
