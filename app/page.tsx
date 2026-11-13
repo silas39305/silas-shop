@@ -18,11 +18,6 @@ export default async function Catalogue() {
         <h1 className="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl">
           Des gadgets, livrés gratuitement à Abidjan.
         </h1>
-        <ul className="mt-5 space-y-1 text-ink/75">
-          <li>Tu paies d’abord par MTN Money, sans compte à créer.</li>
-          <li>Nous validons ta commande puis te prévenons comme tu préfères.</li>
-          <li>Hors d’Abidjan, nous t’envoyons le prix de l’expédition avant que tu paies.</li>
-        </ul>
       </section>
 
       <section className="mt-12" aria-labelledby="titre-catalogue">
