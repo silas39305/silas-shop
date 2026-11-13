@@ -211,9 +211,9 @@ export default function FormCommande({
   <p className="font-bold">Paie {fcfa(totalProduits)} par Wave</p>
   {NUMERO_WAVE ? (
               <p className="mt-1 text-sm">
-                Envoie le montant au <strong>{NUMERO_MOMO}</strong>
-                {NOM_MOMO ? <> (nom : {NOM_MOMO})</> : null}, puis recopie ci-dessous le
-                numéro de transaction reçu par SMS. La livraison est gratuite.
+                Envoie le montant au <strong>{NUMERO_WAVE}</strong>
+{NOM_WAVE ? <> (nom : {NOM_WAVE})</> : null}, puis recopie ci-dessous
+l’identifiant de transaction reçu par SMS ou visible dans ton historique Wave.
               </p>
             ) : (
               <p className="mt-1 text-sm font-medium text-red-800">
