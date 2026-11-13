@@ -223,7 +223,7 @@ l’identifiant de transaction reçu par SMS ou visible dans ton historique Wave
           </div>
 
           <label className={libelle}>
-            Numéro de transaction MTN Money
+            Numéro du dépot wave
             <input
               name="momo_transaction_id"
               required
