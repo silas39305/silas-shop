@@ -213,7 +213,7 @@ export default function FormCommande({
               <p className="mt-1 text-sm">
                 Envoie le montant au <strong>{NUMERO_WAVE}</strong>
 {NOM_WAVE ? <> (nom : {NOM_WAVE})</> : null}, puis recopie ci-dessous
-l’identifiant de transaction reçu par SMS ou visible dans ton historique Wave.
+le numéro de dépôt Wave.
               </p>
             ) : (
               <p className="mt-1 text-sm font-medium text-red-800">
