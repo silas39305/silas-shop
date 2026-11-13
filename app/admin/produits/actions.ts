@@ -24,10 +24,7 @@ export async function enregistrerProduit(formData: FormData) {
   const nom = texte(formData.get('nom'), 120)
   const description = texte(formData.get('description'), 500)
   const prix = Math.round(Number(formData.get('prix')))
-  const prixVendeur = Math.round(Number(formData.get('prix_vendeur')))
   const photo = texte(formData.get('photo_url'), 500)
-  const vendeurNom = texte(formData.get('vendeur_nom'), 80)
-  const telBrut = texte(formData.get('vendeur_tel'), 30)
   const actif = formData.get('actif') === 'on'
 
   if (id && !UUID.test(id)) retour('Produit introuvable.')
@@ -37,20 +34,12 @@ export async function enregistrerProduit(formData: FormData) {
   if (prix < prixVendeur) retour('Le prix de vente ne peut pas être inférieur au prix vendeur.')
   if (photo && !/^https?:\/\//i.test(photo)) retour('Le lien de la photo doit commencer par https://')
 
-  let vendeurTel: string | null = null
-  if (telBrut) {
-    vendeurTel = normaliserTel(telBrut)
-    if (!vendeurTel) retour('Le téléphone du vendeur doit avoir 10 chiffres.')
-  }
 
   const champs = {
     nom,
     description: description || null,
     prix,
-    prix_vendeur: prixVendeur,
     photo_url: photo || null,
-    vendeur_nom: vendeurNom || null,
-    vendeur_tel: vendeurTel,
     actif: id ? actif : true,
   }
 
