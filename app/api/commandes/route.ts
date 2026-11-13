@@ -49,7 +49,7 @@ export async function POST(req: Request) {
   // --- Le prix vient de la base, jamais du navigateur ---
   const { data: produit } = await db
     .from('produits')
-    .select('id, prix, prix_vendeur')
+    .select('id, prix')
     .eq('id', produitId)
     .eq('actif', true)
     .maybeSingle()
@@ -78,7 +78,6 @@ export async function POST(req: Request) {
       quantite,
       prix_unitaire: produit.prix,
       total_produits: produit.prix * quantite,
-      commission: (produit.prix - produit.prix_vendeur) * quantite,
       client_nom: nom,
       client_tel: tel,
       client_email: canal === 'email' ? email : null,
