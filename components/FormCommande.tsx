@@ -207,9 +207,9 @@ export default function FormCommande({
 
       {abidjan ? (
         <>
-          <div className="rounded-lg bg-mtn p-4">
-            <p className="font-bold">Paie {fcfa(totalProduits)} par MTN Money</p>
-            {NUMERO_MOMO ? (
+          <div className="rounded-lg bg-wave p-4">
+  <p className="font-bold">Paie {fcfa(totalProduits)} par Wave</p>
+  {NUMERO_WAVE ? (
               <p className="mt-1 text-sm">
                 Envoie le montant au <strong>{NUMERO_MOMO}</strong>
                 {NOM_MOMO ? <> (nom : {NOM_MOMO})</> : null}, puis recopie ci-dessous le
